@@ -16,11 +16,11 @@
 *Next, add the dependency to your pom.xml:*
 
 ```xml
-  <dependency>
-      <groupId>com.github.Cristike</groupId>
-      <artifactId>GHF</artifactId>
-      <version>VERSION</version>
-  </dependency>
+	<dependency>
+	    <groupId>com.github.Cristike</groupId>
+	    <artifactId>GUI-Helper-Framework</artifactId>
+	    <version>VERSION</version>
+	</dependency>
 ```
 
 # Usage
