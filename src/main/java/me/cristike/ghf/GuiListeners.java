@@ -11,8 +11,7 @@ public class GuiListeners implements Listener {
     @EventHandler
     public void onClick(InventoryClickEvent e) {
         if (e.getCurrentItem() == null) return;
-        if (e.getClickedInventory() != e.getView().getTopInventory()) return;
-        Gui gui = Gui.getGui(e.getInventory());
+        Gui gui = Gui.getGui(e.getView().getTopInventory());
 
         if (gui == null) return;
         e.setResult(gui.allowChanges() ? Event.Result.ALLOW : Event.Result.DENY);
