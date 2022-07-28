@@ -18,7 +18,7 @@
 ```xml
   <dependency>
       <groupId>com.github.Cristike</groupId>
-      <artifactId>GHF</artifactId>
+      <artifactId>GUI-Helper-Framework</artifactId>
       <version>VERSION</version>
   </dependency>
 ```
