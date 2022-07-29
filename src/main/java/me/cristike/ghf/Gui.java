@@ -3,6 +3,8 @@ package me.cristike.ghf;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -65,7 +67,17 @@ public class Gui {
      * The action assigned for InventoryCloseEvent.
      */
     @NotNull
-    private GuiAction closeAction = new GuiAction();
+    private GuiAction closeAction = new GuiAction() {
+        @Override
+        public void executeCloseAction(InventoryCloseEvent event) {
+
+        }
+
+        @Override
+        public void executeClickAction(InventoryClickEvent event) {
+
+        }
+    };
 
     /**
      * Whether the user can modify the inventory or not.
@@ -374,7 +386,17 @@ public class Gui {
      * Returns the action for the given slot or null.
      */
     public GuiAction getAction(int slot) {
-        return ACTIONS.getOrDefault(slot, new GuiAction());
+        return ACTIONS.getOrDefault(slot, new GuiAction() {
+            @Override
+            public void executeCloseAction(InventoryCloseEvent event) {
+
+            }
+
+            @Override
+            public void executeClickAction(InventoryClickEvent event) {
+
+            }
+        });
     }
 
     /**
